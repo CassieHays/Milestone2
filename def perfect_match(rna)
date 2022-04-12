@@ -1,0 +1,9 @@
+import math
+rna = "CACUAGUGCGAU"
+def perfect_match(rna):
+    rna_string = {'A':0, 'C':0, 'G':0, 'U':0}
+    for i in rna:
+        rna_string[i] += 1
+    if rna_string['A']==rna_string['U'] and rna_string['C']==rna_string['G']:
+        return math.factorial(rna_string['A'])*math.factorial(rna_string['C'])
+print(perfect_match(rna))
